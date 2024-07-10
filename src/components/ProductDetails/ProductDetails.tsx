@@ -7,14 +7,16 @@ function ProductDetails() {
   return (
     <div className="productDetails">
       <img src={product.image} alt="Product" className="productImage" />
-      <h2>{product.title}</h2>
-      <p>{product.subtitle}</p>
-      <div className="tags">
-        {product.tags.map((tag, index) => (
-          <span key={index} className="tag">
-            {tag}
-          </span>
-        ))}
+      <div>
+        <h2>{product.title}</h2>
+        <p>{product.subtitle}</p>
+        <div className="tags">
+          {product.tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
       </div>
     </div>
   );

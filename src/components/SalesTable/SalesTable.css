@@ -5,8 +5,15 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.salesTable h3 {
+.tableTitle {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 20px;
+}
+
+.tableTitle h2,
+.tableTitle input {
+  margin: auto 0;
 }
 
 .salesTable table {

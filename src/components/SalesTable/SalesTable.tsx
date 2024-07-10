@@ -20,6 +20,7 @@ function SalesTable() {
   const [sorting, setSorting] = useState<SortingState>([
     { id: "weekEnding", desc: false },
   ]);
+  const [globalFilter, setGlobalFilter] = useState<string>("");
 
   const columns = React.useMemo(
     () => [
@@ -56,8 +57,11 @@ function SalesTable() {
     onSortingChange: setSorting,
     enableSortingRemoval: false,
     enableMultiSort: false,
+    enableGlobalFilter: true,
+    onGlobalFilterChange: setGlobalFilter,
     state: {
       sorting,
+      globalFilter,
     },
     initialState: {
       sorting: [],
@@ -66,7 +70,15 @@ function SalesTable() {
 
   return (
     <div className="salesTable">
-      <h3>Weekly Sales Data</h3>
+      <div className="tableTitle">
+        <h3>Weekly Sales Data</h3>
+        <input
+          type="text"
+          value={globalFilter}
+          placeholder="Find..."
+          onChange={(e) => setGlobalFilter(e.target.value)}
+        />
+      </div>
       <table>
         <thead>
           {table.getHeaderGroups().map((headerGroup) => (
