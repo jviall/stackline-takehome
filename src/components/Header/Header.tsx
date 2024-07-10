@@ -4,7 +4,7 @@ function Header() {
   return (
     <header className="header">
       <div className="logo">
-        <img src="/public/stackline_logo.svg" width={100} alt="Logo" />
+        <img src="/stackline-takehome/stackline_logo.svg" width={100} alt="Logo" />
       </div>
     </header>
   );

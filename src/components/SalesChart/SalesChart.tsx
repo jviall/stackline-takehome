@@ -10,6 +10,7 @@ import {
   Legend,
   TimeScale,
   ChartOptions,
+  ChartData,
 } from "chart.js";
 import { useAppSelector } from "../../redux/store";
 import {
@@ -118,14 +119,20 @@ function SalesChart() {
         tension: 0.1,
       },
     ].filter(Boolean),
-  };
+  } as ChartData<
+    "line",
+    {
+      x: Date;
+      y: number;
+    }[],
+    Date
+  >;
 
   const options: ChartOptions<"line"> = {
     responsive: true,
     maintainAspectRatio: false,
     interaction: {
       mode: "nearest",
-      intersect: false,
     },
     scales: {
       x: {
