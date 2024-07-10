@@ -1,12 +1,12 @@
-import ProductDetails from '../ProductDetails/ProductDetails';
-import SalesChart from '../SalesChart/SalesChart';
-import SalesTable from '../SalesTable/SalesTable';
-import Header from '../Header/Header';
-import { useEffect } from 'react';
-import { fetchProductData } from '../../redux/actions/productActions';
-import { useAppDispatch } from '../../redux/store';
+import ProductDetails from "../ProductDetails/ProductDetails";
+import SalesChart from "../SalesChart/SalesChart";
+import SalesTable from "../SalesTable/SalesTable";
+import Header from "../Header/Header";
+import { useEffect } from "react";
+import { fetchProductData } from "../../redux/actions/productActions";
+import { useAppDispatch } from "../../redux/store";
 
-import './App.css';
+import "./App.css";
 
 function App() {
   const dispatch = useAppDispatch();

@@ -1,29 +1,32 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { fetchProductData } from '../actions/productActions';
-import { Product } from '../../types/Product';
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { fetchProductData } from "../actions/productActions";
+import { Product } from "../../types/Product";
 
 const initialState: Product = {
-  id: '',
-  title: '',
-  image: '',
-  subtitle: '',
-  brand: '',
+  id: "",
+  title: "",
+  image: "",
+  subtitle: "",
+  brand: "",
   reviews: [],
-  retailer: '',
+  retailer: "",
   details: [],
   tags: [],
-  sales: []
+  sales: [],
 };
 
 const productSlice = createSlice({
-  name: 'product',
+  name: "product",
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchProductData.fulfilled, (__, action: PayloadAction<Product>) => {
-      return action.payload;
-    });
-  }
+    builder.addCase(
+      fetchProductData.fulfilled,
+      (__, action: PayloadAction<Product>) => {
+        return action.payload;
+      },
+    );
+  },
 });
 
 export default productSlice.reducer;

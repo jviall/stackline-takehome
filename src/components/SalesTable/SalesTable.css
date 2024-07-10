@@ -14,7 +14,8 @@
   border-collapse: collapse;
 }
 
-.salesTable th, .salesTable td {
+.salesTable th,
+.salesTable td {
   padding: 10px;
   border-bottom: 1px solid #ddd;
   text-align: left;

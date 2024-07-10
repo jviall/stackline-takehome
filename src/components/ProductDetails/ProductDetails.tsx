@@ -1,5 +1,5 @@
-import { RootState, useAppSelector } from '../../redux/store';
-import './ProductDetails.css';
+import { RootState, useAppSelector } from "../../redux/store";
+import "./ProductDetails.css";
 
 function ProductDetails() {
   const product = useAppSelector((state: RootState) => state.product);
@@ -11,7 +11,9 @@ function ProductDetails() {
       <p>{product.subtitle}</p>
       <div className="tags">
         {product.tags.map((tag, index) => (
-          <span key={index} className='tag'>{tag}</span>
+          <span key={index} className="tag">
+            {tag}
+          </span>
         ))}
       </div>
     </div>
